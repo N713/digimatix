@@ -1,0 +1,36 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    background-color: $white;
+    color: $purple;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 24px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    min-height: 48px;
+
+    &:hover,
+    &:focus {
+        background-color: $green;
+        color: $white;
+    }
+}
+
+@media(max-width: $ipadAirV) {
+    .button {
+        min-height: 30px;
+    }
+}
+
+@media(max-width: $mobile) {
+    .button {
+        min-height: 20px;
+        font-size: 10px;
+        line-height: 12px;
+    }
+}

@@ -1,0 +1,198 @@
+.offers {
+    padding-top: 168px;
+    padding-bottom: 96px;
+
+    h2 {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 48px;
+        margin-bottom: 66px;
+        text-align: center;
+    }
+
+    &__tabs {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 32px;
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        h3 {
+            padding: 10px 0;
+            margin-right: 48px;
+            font-family: $roboto;
+            color: $purple;
+            font-size: 16px;
+            line-height: 24px;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        h3:not(.active) {
+            &:hover,
+            &:focus {
+                color: $green;
+            }
+        }
+
+        h3.active {
+            -webkit-box-shadow: 0px 2px 0px 0px rgba(81, 1, 166, 1);
+            -moz-box-shadow: 0px 2px 0px 0px rgba(81, 1, 166, 1);
+            box-shadow: 0px 2px 0px 0px rgba(81, 1, 166, 1);
+        }
+    }
+
+    &__button {
+        margin-left: 16px;
+    }
+
+    &__lists {
+        overflow-x: hidden;
+
+        ul {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-bottom: 40px;
+        }
+
+        ul.none {
+            display: none;
+        }
+
+        li {
+            width: 100%;
+            max-width: 256px;
+            flex-shrink: 0;
+            margin-right: 64px;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+
+            div:first-of-type {
+                width: 100%;
+                max-height: 144px;
+                border-radius: 8px;
+                background-color: $darkPurple;
+                overflow: hidden;
+                margin-bottom: 24px;
+
+                img {
+                    transition: scale 0.2s;
+                    position: relative;
+                    top: -125px;
+                }
+            }
+
+            h4 {
+                font-size: 14px;
+                line-height: 24px;
+                letter-spacing: 0.01em;
+                text-transform: uppercase;
+                margin-bottom: 8px;
+                transition: color 0.2s;
+            }
+
+            p {
+                font-size: 13px;
+                line-height: 20px;
+            }
+
+            a {
+                &:hover,
+                &:focus {
+                    img {
+                        scale: 1.2;
+                    }
+
+                    h4 {
+                        color: $green;
+                    }
+                }
+            }
+        }
+
+        li.no-top {
+            div:first-of-type {
+                img {
+                    top: -12px;
+                }
+            }
+        }
+    }
+
+    &__list.none {
+        display: none;
+    }
+}
+
+.swiper-pagination {
+    text-align: center;
+}
+
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    margin: 0 8px;
+    background-color: $grey;
+    border-radius: 100%;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: $purple;
+}
+
+@media(max-width: $ipadMiniV) {
+    .offers {
+        padding: 80px 0;
+
+        h2 {
+            font-size: 30px;
+            line-height: 38px;
+            margin-bottom: 30px;
+        }
+
+        &__tabs {
+            h3 {
+                padding: 5px 0;
+                margin-right: 20px;
+            }
+        }
+
+        &__lists {
+            li {
+                margin-right: 20px;
+            }
+        }
+    }
+
+    .swiper-pagination-bullet {
+        margin: 0 4px;
+    }
+}
+
+@media(max-width: $mobile) {
+    .offers {
+        padding: 40px 0;
+
+        h2 {
+            font-size: 24px;
+            line-height: 34px;
+        }
+
+        &__tabs {
+            h3 {
+                margin-right: 10px;
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+    }
+}

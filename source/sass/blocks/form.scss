@@ -1,0 +1,157 @@
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    z-index: 5;
+
+    &__field {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-right: 10px;
+
+        label {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 32px;
+            position: absolute;
+            top: -16px;
+            left: 10px;
+            display: block;
+            padding: 0 16px;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), #5101A6;
+            opacity: 0;
+            transition: opacity 0.2s;
+            border-radius: 32px;
+        }
+
+        input {
+            width: 256px;
+            min-height: 72px;
+            color: $white;
+            background-color: transparent;
+            padding: 24px;
+            border: 1px solid $white;
+            border-radius: 6px;
+
+            &:focus {
+                border: 1px solid $brightPurple;
+                color: $brightPurple;
+                outline: $brightPurple;
+            }
+        }
+
+        input.error {
+            border: 2px solid red;
+        }
+
+        input:focus + label {
+            opacity: 1;
+        }
+
+        &:last-of-type {
+            label {
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), #7832c3;
+            }
+        }
+    }
+
+    button {
+        width: 256px;
+        padding: 24px;
+        min-height: 72px;
+        background-color: $purple;
+        border-radius: 6px;
+        color: $white;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: uppercase;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.2s;
+
+        &:hover,
+        &:focus {
+            background-color: $brightPurple;
+        }
+    }
+}
+
+::placeholder {
+    color: $white;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.form.none {
+    display: none;
+}
+
+
+@media(max-width: $ipadMini) {
+    .form {
+        &__field {
+            input {
+                width: 205px;
+            }
+        }
+    }
+}
+
+@media(max-width: $ipadAirV) {
+    .form {
+        &__field {
+            input {
+                width: 190px;
+            }
+        }
+    }
+}
+
+@media(max-width: $ipadMiniV) {
+    .form {
+        flex-wrap: wrap;
+
+        &__field {
+            margin-bottom: 20px;
+            width: 32%;
+
+            input {
+                width: 100%;
+            }
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+
+        button {
+            width: 100%;
+        }
+    }
+}
+
+@media(max-width: $mobile) {
+    .form {
+        &__field {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 10px;
+
+            input {
+                min-height: auto;
+                padding: 16px;
+            }
+        }
+
+        button {
+            padding: 16px;
+            min-height: auto;
+        }
+    }
+}

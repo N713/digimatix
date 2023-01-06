@@ -1,0 +1,69 @@
+.top {
+    background-color: $black;
+    color: $white;
+    background-image: url('../img/top-back.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    position: relative;
+    overflow-x: clip;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url('../img/top-back@2x.jpg');
+    }
+
+    &::after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.8;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    &__header,
+    &__intro {
+        position: relative;
+        z-index: 3;
+    }
+
+    &__header {
+        z-index: 5;
+    }
+
+    &__intro {
+        h2, p {
+            color: $white;
+        }
+    }
+
+    &__arrow {
+        position: absolute;
+        width: 850px;
+        height: 946px;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: initial;
+        top: -130px;
+        z-index: 2;
+        background-image: url('../img/arrow-grey.svg');
+        pointer-events: none;
+        
+        &--one {
+            left: 650px;
+        }
+
+        &--two {
+            left: 880px;
+        }
+
+        &--three {
+            left: 1480px;
+        }
+    }
+}

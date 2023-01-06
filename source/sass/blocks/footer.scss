@@ -1,0 +1,19 @@
+.footer {
+    background-color: $black;
+    padding: 24px 0;
+    
+    svg {
+        margin: 0 auto;
+    }
+}
+
+@media(max-width: $ipadMiniV) {
+    .footer {
+        padding: 20px 0;
+
+        svg {
+            width: 100px;
+            height: auto;
+        }
+    }
+}

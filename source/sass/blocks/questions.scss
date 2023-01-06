@@ -1,0 +1,122 @@
+.questions {
+    padding: 72px 0 112px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), #5101A6;
+    color: $white;
+    overflow: hidden;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        border-radius: 100%;
+        border: 2px solid $white;
+        opacity: 0.05;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &::before {
+        width: 640px;
+        height: 640px;
+    }
+
+    &::after {
+        width: 1144px;
+        height: 1144px;
+    }
+
+    h2 {
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 32px;
+        text-align: center;
+        color: $white;
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 28px;
+        max-width: 550px;
+        margin: 0 auto 48px;
+        text-align: center;
+    }
+
+    &__arrow {
+        position: absolute;
+        width: 850px;
+        height: 946px;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: initial;
+        top: -200px;
+        z-index: 2;
+        background-image: url('../img/arrow-purple.svg');
+        pointer-events: none;
+        
+        &--one {
+            left: 165px;
+            opacity: 0.1;
+        }
+        
+        &--two {
+            left: 535px;
+            opacity: 0.4;
+        }
+
+        &--three {
+            left: 905px;
+            opacity: 0.4;
+        }
+
+        &--two,
+        &--three {
+            &::before {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                background: radial-gradient(49.18% 39.7% at 53% 49.31%, #FFFFFF 59.41%, rgba(255, 255, 255, 0) 100%);
+                opacity: 0.1;
+                box-shadow: -120px 2px 94px rgba(0, 0, 0, 0.135134);
+                width: 850px;
+                height: 946px;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}
+
+@media(max-width: $ipadMiniV) {
+    .questions {
+        padding: 80px 0;
+
+        h2 {
+            font-size: 30px;
+            line-height: 30px;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 24px;
+            max-width: 400px;
+            margin: 0 auto 40px;
+        }
+    }
+}
+
+@media(max-width: $mobile) {
+    .questions {
+        padding: 40px 0;
+
+        p {
+            font-size: 14px;
+            line-height: 18px;
+            max-width: 290px;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+*, *::before, *::after {
+  @include reset();
+  box-sizing: border-box;
+}
+
+.body {
+  background-color: $white;
+  font-family: $roboto;
+  color: $black;
+  position: relative;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+img, picture, svg, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input, textarea, button, select {
+  font: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $darkPurple;
+  font-family: $mont;
+}
+
+.main {
+  position: relative;
+  z-index: 5;
+}

@@ -1,0 +1,23 @@
+.play {
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    background-color: $purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover,
+    &:focus {
+        background-color: $green;
+    }
+}
+
+@media(max-width: $ipadAirV) {
+    .play {
+        width: 40px;
+        height: 40px;
+    }
+}
