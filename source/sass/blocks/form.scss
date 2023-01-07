@@ -22,7 +22,7 @@
             left: 10px;
             display: block;
             padding: 0 16px;
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), #5101A6;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), #5101a6;
             opacity: 0;
             transition: opacity 0.2s;
             border-radius: 32px;
@@ -92,8 +92,7 @@
     display: none;
 }
 
-
-@media(max-width: $ipadMini) {
+@media (max-width: $ipadMini) {
     .form {
         &__field {
             input {
@@ -103,7 +102,7 @@
     }
 }
 
-@media(max-width: $ipadAirV) {
+@media (max-width: $ipadAirV) {
     .form {
         &__field {
             input {
@@ -113,7 +112,7 @@
     }
 }
 
-@media(max-width: $ipadMiniV) {
+@media (max-width: $ipadMiniV) {
     .form {
         flex-wrap: wrap;
 
@@ -136,16 +135,30 @@
     }
 }
 
-@media(max-width: $mobile) {
+@media (max-width: $mobile) {
     .form {
         &__field {
             width: 100%;
             margin-right: 0;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
 
             input {
                 min-height: auto;
                 padding: 16px;
+            }
+
+            label {
+                font-size: 10px;
+                line-height: 12px;
+                top: -5px;
+                left: 10px;
+                padding: 0 8px;
+            }
+
+            &:last-of-type {
+                label {
+                    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), #5101a6;
+                }
             }
         }
 
